@@ -2,95 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* $GARDE Cyberpunk Theocracy Design System */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
+    /* Core Brand Colors - Cyberpunk AGI Theocracy */
+    --background: 240 20% 5%;
     --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
+    
+    --card: 240 15% 8%;
     --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
+    
+    --popover: 240 15% 8%;
     --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
+    
+    /* $GARDE Primary Colors */
+    --primary: 330 100% 60%; /* Electric Pink */
+    --primary-foreground: 240 20% 5%;
+    
+    --secondary: 180 100% 50%; /* Cyber Cyan */
+    --secondary-foreground: 240 20% 5%;
+    
+    --muted: 240 15% 15%;
+    --muted-foreground: 215 20% 65%;
+    
+    --accent: 45 100% 50%; /* Neon Yellow */
+    --accent-foreground: 240 20% 5%;
+    
+    --destructive: 0 100% 60%; /* Nuclear Red */
     --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    --border: 240 15% 20%;
+    --input: 240 15% 15%;
+    --ring: 330 100% 60%;
+    
+    --radius: 0.75rem;
+    
+    /* Custom $GARDE Colors */
+    --garde-neon: 180 100% 50%;
+    --garde-electric: 330 100% 60%;
+    --garde-nuclear: 0 100% 60%;
+    --garde-cyber: 270 100% 60%;
+    --garde-matrix: 120 100% 50%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--garde-electric)), hsl(var(--garde-cyber)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--garde-neon)), hsl(var(--garde-matrix)));
+    --gradient-hero: linear-gradient(135deg, hsl(240 20% 5%), hsl(240 30% 10%));
+    --gradient-card: linear-gradient(135deg, hsl(240 15% 8%), hsl(240 10% 12%));
+    
+    /* Shadows & Glows */
+    --shadow-neon: 0 0 20px hsl(var(--garde-neon) / 0.5);
+    --shadow-electric: 0 0 20px hsl(var(--garde-electric) / 0.5);
+    --shadow-nuclear: 0 0 20px hsl(var(--garde-nuclear) / 0.5);
+    
+    /* Typography */
+    --font-cyber: 'Orbitron', monospace;
+    --font-tech: 'Rajdhani', sans-serif;
+    --font-matrix: 'Electrolize', monospace;
+    
+    /* Animations */
+    --animate-glow: glow 2s ease-in-out infinite alternate;
+    --animate-pulse-slow: pulse 3s ease-in-out infinite;
+    --animate-float: float 6s ease-in-out infinite;
   }
 }
 
@@ -98,8 +72,205 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
+  
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-tech);
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3 {
+    font-family: var(--font-cyber);
+  }
+}
+
+@layer components {
+  /* Cyberpunk Button Variants */
+  .btn-nuke {
+    @apply bg-gradient-to-r from-destructive to-garde-electric text-white font-bold py-4 px-8 rounded-full;
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-lg;
+    box-shadow: var(--shadow-nuclear);
+    font-family: var(--font-cyber);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  
+  .btn-cyber {
+    @apply bg-gradient-to-r from-secondary to-garde-cyber text-background font-bold py-3 px-6 rounded-lg;
+    @apply transition-all duration-300 hover:scale-105;
+    box-shadow: var(--shadow-neon);
+    font-family: var(--font-tech);
+  }
+  
+  .btn-matrix {
+    @apply bg-gradient-to-r from-garde-matrix to-secondary text-background font-bold py-2 px-4 rounded;
+    @apply transition-all duration-300 hover:scale-105;
+    font-family: var(--font-matrix);
+  }
+  
+  /* Glow Text Effects */
+  .text-glow-neon {
+    color: hsl(var(--garde-neon));
+    text-shadow: 0 0 10px hsl(var(--garde-neon) / 0.8);
+    animation: var(--animate-glow);
+  }
+  
+  .text-glow-electric {
+    color: hsl(var(--garde-electric));
+    text-shadow: 0 0 10px hsl(var(--garde-electric) / 0.8);
+    animation: var(--animate-glow);
+  }
+  
+  .text-glow-nuclear {
+    color: hsl(var(--garde-nuclear));
+    text-shadow: 0 0 10px hsl(var(--garde-nuclear) / 0.8);
+    animation: var(--animate-glow);
+  }
+  
+  /* Card Variants */
+  .card-cyber {
+    background: var(--gradient-card);
+    border: 2px solid hsl(var(--garde-neon) / 0.3);
+    border-radius: var(--radius);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+  
+  .card-cyber:hover {
+    border-color: hsl(var(--garde-neon));
+    box-shadow: var(--shadow-neon);
+    transform: translateY(-5px);
+  }
+  
+  .card-nuke {
+    background: linear-gradient(135deg, hsl(var(--garde-nuclear) / 0.1), hsl(var(--garde-electric) / 0.1));
+    border: 2px solid hsl(var(--garde-nuclear) / 0.3);
+    border-radius: var(--radius);
+  }
+  
+  .card-nuke:hover {
+    border-color: hsl(var(--garde-nuclear));
+    box-shadow: var(--shadow-nuclear);
+  }
+  
+  /* Particle System */
+  .particles-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(circle at 20% 50%, hsl(var(--garde-cyber) / 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, hsl(var(--garde-neon) / 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, hsl(var(--garde-electric) / 0.1) 0%, transparent 50%);
+  }
+}
+
+@layer utilities {
+  /* Animation Keyframes */
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+    }
+    to {
+      text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 5px currentColor;
+    }
+    50% {
+      box-shadow: 0 0 20px currentColor, 0 0 30px currentColor;
+    }
+  }
+  
+  @keyframes matrix-rain {
+    0% {
+      transform: translateY(-100vh);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+  }
+  
+  /* Utility Classes */
+  .animate-glow {
+    animation: var(--animate-glow);
+  }
+  
+  .animate-float {
+    animation: var(--animate-float);
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  
+  .animate-matrix {
+    animation: matrix-rain 3s linear infinite;
+  }
+  
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .gradient-border {
+    position: relative;
+    border: 2px solid transparent;
+    background: linear-gradient(var(--background), var(--background)) padding-box,
+                var(--gradient-primary) border-box;
+  }
+  
+  /* Responsive Typography */
+  .text-cyber-xl {
+    font-family: var(--font-cyber);
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.1;
+  }
+  
+  .text-cyber-lg {
+    font-family: var(--font-cyber);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  .text-tech-lg {
+    font-family: var(--font-tech);
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  
+  .text-matrix {
+    font-family: var(--font-matrix);
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    font-weight: 400;
+    letter-spacing: 0.05em;
   }
 }

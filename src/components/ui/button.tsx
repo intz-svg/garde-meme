@@ -18,6 +18,9 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        nuke: "bg-gradient-to-r from-destructive to-garde-electric text-white font-bold rounded-full hover:scale-105 transition-all duration-300 shadow-lg",
+        cyber: "bg-gradient-to-r from-secondary to-garde-cyber text-background font-bold rounded-lg hover:scale-105 transition-all duration-300",
+        matrix: "bg-gradient-to-r from-garde-matrix to-secondary text-background font-bold rounded transition-all duration-300 hover:scale-105",
       },
       size: {
         default: "h-10 px-4 py-2",

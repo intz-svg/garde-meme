@@ -24,6 +24,13 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				
+				// $GARDE Custom Colors
+				'garde-neon': 'hsl(var(--garde-neon))',
+				'garde-electric': 'hsl(var(--garde-electric))',
+				'garde-nuclear': 'hsl(var(--garde-nuclear))',
+				'garde-cyber': 'hsl(var(--garde-cyber))',
+				'garde-matrix': 'hsl(var(--garde-matrix))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -67,6 +74,11 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			fontFamily: {
+				'cyber': ['Orbitron', 'monospace'],
+				'tech': ['Rajdhani', 'sans-serif'],
+				'matrix': ['Electrolize', 'monospace'],
 			},
 			keyframes: {
 				'accordion-down': {
