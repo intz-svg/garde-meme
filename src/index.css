@@ -2,6 +2,169 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    /* Core Design System Colors - HSL Values */
+    --garde-nuclear: 0 85% 55%;
+    --garde-electric: 315 100% 50%; 
+    --garde-neon: 180 100% 50%;
+    --garde-cyber: 240 100% 60%;
+    --garde-matrix: 120 100% 40%;
+    
+    /* Background & Surfaces */
+    --background: 240 15% 8%;
+    --foreground: 180 5% 95%;
+    --card: 240 15% 12%;
+    --card-foreground: 180 5% 95%;
+    
+    /* Interactive Elements */
+    --primary: 315 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 15% 20%;
+    --secondary-foreground: 180 5% 95%;
+    
+    /* UI States */
+    --muted: 240 15% 15%;
+    --muted-foreground: 180 5% 70%;
+    --accent: 180 100% 50%;
+    --accent-foreground: 240 15% 8%;
+    
+    /* Borders & Separators */
+    --border: 240 15% 20%;
+    --input: 240 15% 20%;
+    --ring: 315 100% 50%;
+    
+    /* Status Colors */
+    --destructive: 0 85% 55%;
+    --destructive-foreground: 0 0% 100%;
+  }
+}
+
+@layer components {
+  /* Typography Classes */
+  .text-cyber-xs { font-size: 0.75rem; font-family: 'Electrolize', monospace; }
+  .text-cyber-sm { font-size: 0.875rem; font-family: 'Electrolize', monospace; }
+  .text-cyber-base { font-size: 1rem; font-family: 'Electrolize', monospace; }
+  .text-cyber-lg { font-size: 1.125rem; font-family: 'Orbitron', sans-serif; }
+  .text-cyber-xl { font-size: 1.25rem; font-family: 'Orbitron', sans-serif; }
+  .text-cyber-2xl { font-size: 1.5rem; font-family: 'Orbitron', sans-serif; }
+  .text-cyber-3xl { font-size: 1.875rem; font-family: 'Orbitron', sans-serif; }
+  .text-cyber-4xl { font-size: 2.25rem; font-family: 'Orbitron', sans-serif; }
+  
+  /* Gradient Text */
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--garde-electric)), hsl(var(--garde-neon)));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease-in-out infinite;
+  }
+  
+  /* Component Variants */
+  .card-cyber {
+    background: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--secondary)) 100%);
+    border: 2px solid hsl(var(--garde-neon) / 0.3);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card-cyber::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, hsl(var(--garde-electric)), hsl(var(--garde-cyber)));
+  }
+  
+  .card-nuke {
+    background: linear-gradient(135deg, hsl(var(--garde-nuclear) / 0.1) 0%, hsl(var(--background)) 100%);
+    border: 2px solid hsl(var(--garde-nuclear) / 0.3);
+  }
+  
+  .card-matrix {
+    background: linear-gradient(135deg, hsl(var(--garde-matrix) / 0.1) 0%, hsl(var(--background)) 100%);
+    border: 2px solid hsl(var(--garde-matrix) / 0.3);
+  }
+  
+  /* Button Variants */
+  .btn-cyber {
+    background: linear-gradient(135deg, hsl(var(--garde-electric)), hsl(var(--garde-cyber)));
+    color: hsl(var(--background));
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-cyber:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px hsl(var(--garde-electric) / 0.4);
+  }
+  
+  .btn-nuke {
+    background: linear-gradient(135deg, hsl(var(--garde-nuclear)), hsl(var(--garde-electric)));
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+  }
+  
+  .btn-matrix {
+    background: linear-gradient(135deg, hsl(var(--garde-matrix)), hsl(var(--garde-neon)));
+    color: hsl(var(--background));
+    font-family: 'Electrolize', monospace;
+  }
+}
+
+@layer utilities {
+  /* Animations */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes glow {
+    0% { box-shadow: 0 0 5px hsl(var(--garde-neon) / 0.5); }
+    100% { box-shadow: 0 0 20px hsl(var(--garde-neon) / 0.8), 0 0 30px hsl(var(--garde-electric) / 0.4); }
+  }
+  
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  /* Background Patterns */
+  .bg-grid {
+    background-image: 
+      linear-gradient(hsl(var(--garde-neon) / 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--garde-neon) / 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  .bg-dots {
+    background-image: radial-gradient(circle, hsl(var(--garde-electric) / 0.3) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
+
 /* $GARDE Cyberpunk Theocracy Design System */
 
 @layer base {
