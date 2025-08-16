@@ -11,6 +11,7 @@ const GardeHeader: React.FC = () => {
     { id: 'strategic', label: 'PLAN' },
     { id: 'industrial', label: 'TECH' },
     { id: 'token', label: 'TOKEN' },
+    { id: 'hyperstition', label: 'HYPERSTITION' },
     { id: 'narrative', label: 'STORY' }
   ];
 

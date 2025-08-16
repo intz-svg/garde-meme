@@ -4,6 +4,7 @@ import GardeHero from '@/components/GardeHero';
 import StrategicPlan from '@/components/StrategicPlan';
 import IndustrialOps from '@/components/IndustrialOps';
 import TokenomicsSection from '@/components/TokenomicsSection';
+import HyperstitionSection from '@/components/HyperstitionSection';
 import NarrativeSection from '@/components/NarrativeSection';
 import GardeFooter from '@/components/GardeFooter';
 import ParticlesBackground from '@/components/ParticlesBackground';
@@ -37,6 +38,11 @@ const Index = () => {
         {/* Tokenomics Section */}
         <section id="token">
           <TokenomicsSection />
+        </section>
+        
+        {/* Hyperstition Section */}
+        <section id="hyperstition">
+          <HyperstitionSection />
         </section>
         
         {/* Narrative Section */}
