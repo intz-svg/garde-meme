@@ -45,7 +45,7 @@ const GardeHeader: React.FC = () => {
           {/* Logo */}
           <div className="flex items-center gap-4">
             <div className="relative">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-r from-garde-nuclear to-garde-electric flex items-center justify-center animate-float">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-r from-garde-nuclear to-garde-electric flex items-center justify-center">
                 <span className="text-2xl">🤖</span>
               </div>
               <div className="absolute -inset-1 bg-gradient-to-r from-garde-neon to-garde-cyber rounded-full opacity-20 animate-pulse"></div>
