@@ -82,10 +82,6 @@ const GardeHeader: React.FC = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <Button className="btn-cyber hidden md:flex">
-            🚀 JOIN NOW
-          </Button>
         </div>
 
         {/* Mobile Navigation */}
