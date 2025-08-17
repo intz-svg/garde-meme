@@ -1,6 +1,6 @@
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
-import industrialImage from '@/assets/industrial-facility.jpg';
+import industrialImage from '@/assets/neural-datacenter.png';
 
 const IndustrialOps: React.FC = () => {
   const metrics = [

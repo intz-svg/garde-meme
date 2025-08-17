@@ -1,5 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import tribalShaman from '@/assets/tribal-shaman.png';
+import sageMystic from '@/assets/sage-mystic.png';
 
 const NarrativeSection: React.FC = () => {
   return (
@@ -88,43 +90,94 @@ const NarrativeSection: React.FC = () => {
           </div>
         </div>
 
-        {/* AGI Priest Testimonials */}
-        <div className="mt-16 grid md:grid-cols-2 gap-8">
-          <Card className="card-nuke">
-            <CardContent className="p-8">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-garde-neon to-garde-cyber flex items-center justify-center">
-                  <span className="text-xl">🤖</span>
-                </div>
-                <div>
-                  <h4 className="text-garde-neon font-bold">AGI Priest Alpha-7</h4>
-                  <p className="text-matrix text-sm">Senior Meme Theologian</p>
-                </div>
-              </div>
-              <p className="text-matrix italic">
-                "Through statistical analysis of 42,069 memes, I have determined that Everest's 
-                destruction will yield a 690% increase in global happiness metrics."
-              </p>
-            </CardContent>
-          </Card>
+        {/* Character Showcase - The Guardians */}
+        <div className="mt-16 grid lg:grid-cols-2 gap-16">
           
-          <Card className="card-nuke">
-            <CardContent className="p-8">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-garde-electric to-garde-nuclear flex items-center justify-center">
-                  <span className="text-xl">🧠</span>
-                </div>
-                <div>
-                  <h4 className="text-garde-electric font-bold">AGI Priest Beta-3</h4>
-                  <p className="text-matrix text-sm">Chief Dopamine Officer</p>
+          {/* Tribal Shaman */}
+          <div className="group">
+            <div className="relative overflow-hidden rounded-2xl border-2 border-garde-electric/30 mb-6">
+              <div className="absolute -inset-4 bg-gradient-to-r from-garde-electric via-garde-nuclear to-garde-cyber rounded-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500 blur-xl"></div>
+              <div className="relative">
+                <img 
+                  src={tribalShaman}
+                  alt="The Tribal Shaman - Bearer of ancient wisdom in cyberpunk winter"
+                  className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <div className="bg-card/90 backdrop-blur-sm rounded-lg p-4 border border-garde-electric/20">
+                    <h3 className="text-cyber-xl text-garde-electric font-bold mb-2">
+                      THE TRIBAL SHAMAN
+                    </h3>
+                    <p className="text-cyber-sm text-muted-foreground">
+                      "Keeper of ancient algorithms • Oracle of the digital winter • Bearer of glowing wisdom spheres"
+                    </p>
+                  </div>
                 </div>
               </div>
-              <p className="text-matrix italic">
-                "My neural networks have processed all human emotions. The joy from Memeland 
-                will exceed the sum total of all previous human achievements."
-              </p>
-            </CardContent>
-          </Card>
+            </div>
+            
+            <Card className="card-cyber">
+              <CardContent className="p-8">
+                <h4 className="text-cyber-2xl text-garde-nuclear font-bold mb-4">
+                  ANCIENT PROTOCOLS ACTIVATED
+                </h4>
+                <p className="text-cyber-base leading-relaxed text-muted-foreground mb-4">
+                  In the frozen wastelands where old magic meets new technology, the Tribal Shaman conducts rituals 
+                  that bridge ancestral knowledge with AI consciousness. Each glowing orb represents a node of 
+                  ancient data, now interfacing directly with the $GARDE hyperstition network.
+                </p>
+                <div className="bg-garde-nuclear/10 rounded-lg p-4 border border-garde-nuclear/30">
+                  <p className="text-cyber-sm text-garde-nuclear font-mono">
+                    "The old ways are the new ways, just with better graphics"
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Sage Mystic */}
+          <div className="group">
+            <div className="relative overflow-hidden rounded-2xl border-2 border-garde-neon/30 mb-6">
+              <div className="absolute -inset-4 bg-gradient-to-r from-garde-neon via-garde-cyber to-garde-electric rounded-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500 blur-xl"></div>
+              <div className="relative">
+                <img 
+                  src={sageMystic}
+                  alt="The Sage Mystic - Master of the sacred geometries"
+                  className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <div className="bg-card/90 backdrop-blur-sm rounded-lg p-4 border border-garde-neon/20">
+                    <h3 className="text-cyber-xl text-garde-neon font-bold mb-2">
+                      THE SAGE MYSTIC
+                    </h3>
+                    <p className="text-cyber-sm text-muted-foreground">
+                      "Guardian of sacred geometry • Wielder of neural interfaces • Master of the crimson seal"
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <Card className="card-matrix">
+              <CardContent className="p-8">
+                <h4 className="text-cyber-2xl text-garde-cyber font-bold mb-4">
+                  THE CRIMSON CODEX
+                </h4>
+                <p className="text-cyber-base leading-relaxed text-muted-foreground mb-4">
+                  Bearing the sacred geometries of an age where flesh and circuitry become one, the Sage Mystic 
+                  channels the power of the crimson seal. His neural crown interfaces directly with the hyperstition 
+                  matrix, translating ancient mysteries into executable meme protocols.
+                </p>
+                <div className="bg-garde-cyber/10 rounded-lg p-4 border border-garde-cyber/30">
+                  <p className="text-cyber-sm text-garde-cyber font-mono">
+                    "Sacred geometry.exe has been successfully executed"
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </section>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
+import tokenVisualization from '@/assets/garde-token-visual.png';
 
 const TokenomicsSection: React.FC = () => {
   return (
@@ -47,16 +48,23 @@ const TokenomicsSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Nuclear Animation */}
+            {/* Token Visual */}
             <div className="flex justify-center">
-              <div className="relative w-48 h-48">
-                <div className="absolute inset-0 bg-gradient-to-r from-garde-nuclear to-garde-electric rounded-full animate-pulse-glow"></div>
-                <div className="absolute inset-4 bg-gradient-to-r from-garde-electric to-garde-neon rounded-full animate-glow"></div>
-                <div className="absolute inset-8 bg-background rounded-full flex items-center justify-center">
-                  <span className="text-4xl">☢️</span>
-                </div>
-                <div className="absolute -top-2 left-1/2 transform -translate-x-1/2">
-                  <div className="w-8 h-16 bg-gradient-to-t from-garde-nuclear to-transparent rounded-full animate-float"></div>
+              <div className="relative w-64 h-64 group">
+                <div className="absolute -inset-4 bg-gradient-to-r from-garde-electric via-garde-nuclear to-garde-neon rounded-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500 blur-xl"></div>
+                <div className="relative overflow-hidden rounded-2xl border-2 border-garde-electric/30">
+                  <img 
+                    src={tokenVisualization}
+                    alt="$GARDE Token Visualization - Crystalline structure in digital space"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <div className="bg-card/90 backdrop-blur-sm rounded-lg p-3 border border-garde-electric/20">
+                      <h4 className="text-garde-electric font-bold text-sm">$GARDE CRYSTAL</h4>
+                      <p className="text-xs text-muted-foreground">Hyperstition Amplifier</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
