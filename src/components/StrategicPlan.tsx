@@ -63,12 +63,12 @@ const StrategicPlan: React.FC = () => {
           <div className="card-cyber p-2 overflow-hidden">
             <img 
               src={strategicImage} 
-              alt="Strategic Command Center" 
+              alt="Cyber Warrior - Strategic commander with blue energy sword leading the operation" 
               className="w-full h-auto rounded-lg transition-transform duration-500 hover:scale-105"
             />
             <div className="p-4 text-center">
               <span className="text-garde-neon font-bold text-matrix">
-                STRATEGIC OVERVIEW MAP
+                STRATEGIC CYBER COMMANDER
               </span>
             </div>
           </div>

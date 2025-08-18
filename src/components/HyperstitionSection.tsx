@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from '@/components/ui/card';
-import hyperstitionImage from '@/assets/digital-sphinx.webp';
+import cyberAndroidImage from '@/assets/cyber-android.webp';
 
 const HyperstitionSection: React.FC = () => {
   return (
@@ -24,8 +24,8 @@ const HyperstitionSection: React.FC = () => {
               <div className="absolute -inset-4 bg-gradient-to-r from-garde-electric via-garde-neon to-garde-cyber rounded-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500 blur-xl"></div>
               <div className="relative overflow-hidden rounded-2xl border-2 border-garde-neon/30">
                 <img 
-                  src={hyperstitionImage}
-                  alt="Hyperstition Amplifier - AGI New Era facility in cyberpunk mountain setting"
+                  src={cyberAndroidImage}
+                  alt="Cyber Android - Neural enhanced consciousness with golden crown of wisdom"
                   className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
