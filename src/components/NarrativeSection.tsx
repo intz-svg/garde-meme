@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import tribalShaman from '@/assets/tribal-shaman.png';
-import sageMystic from '@/assets/sage-mystic.png';
+import tribalShaman from '@/assets/tribal-shaman.webp';
+import sageMystic from '@/assets/sage-mystic.webp';
 
 const NarrativeSection: React.FC = () => {
   return (

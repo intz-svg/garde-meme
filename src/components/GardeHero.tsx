@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import heroImage from '@/assets/neural-enhanced.png';
-import agiPriest from '@/assets/cyber-android.png';
+import heroImage from '@/assets/neural-enhanced.webp';
+import agiPriest from '@/assets/cyber-android.webp';
 
 const GardeHero: React.FC = () => {
   const [currentActivity, setCurrentActivity] = useState(0);

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from '@/components/ui/card';
-import hyperstitionImage from '@/assets/digital-sphinx.png';
+import hyperstitionImage from '@/assets/digital-sphinx.webp';
 
 const HyperstitionSection: React.FC = () => {
   return (

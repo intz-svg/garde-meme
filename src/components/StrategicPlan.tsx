@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import strategicImage from '@/assets/cyber-warrior.png';
+import strategicImage from '@/assets/cyber-warrior.webp';
 
 const StrategicPlan: React.FC = () => {
   return (
