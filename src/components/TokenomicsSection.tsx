@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
-import tokenVisualization from '@/assets/garde-token-visual.png';
+import tokenVisualization from '@/assets/digital-sphinx.webp';
 
 const TokenomicsSection: React.FC = () => {
   return (
@@ -55,14 +55,14 @@ const TokenomicsSection: React.FC = () => {
                 <div className="relative overflow-hidden rounded-2xl border-2 border-garde-electric/30">
                   <img 
                     src={tokenVisualization}
-                    alt="$GARDE Token Visualization - Crystalline structure in digital space"
+                    alt="Digital Sphinx - Ancient wisdom meets cyberpunk technology in the $GARDE ecosystem"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
                   <div className="absolute bottom-4 left-4 right-4">
                     <div className="bg-card/90 backdrop-blur-sm rounded-lg p-3 border border-garde-electric/20">
-                      <h4 className="text-garde-electric font-bold text-sm">$GARDE CRYSTAL</h4>
-                      <p className="text-xs text-muted-foreground">Hyperstition Amplifier</p>
+                      <h4 className="text-garde-electric font-bold text-sm">DIGITAL SPHINX</h4>
+                      <p className="text-xs text-muted-foreground">Guardian of Sacred Tokens</p>
                     </div>
                   </div>
                 </div>

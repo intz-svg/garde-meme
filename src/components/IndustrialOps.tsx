@@ -1,6 +1,6 @@
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
-import industrialImage from '@/assets/neural-datacenter.png';
+import industrialImage from '@/assets/neural-enhanced.webp';
 
 const IndustrialOps: React.FC = () => {
   const metrics = [
@@ -68,12 +68,12 @@ const IndustrialOps: React.FC = () => {
           <div className="card-cyber p-2 overflow-hidden">
             <img 
               src={industrialImage} 
-              alt="Industrial Meme Production Facility" 
+              alt="Neural Enhanced Cyberpunk Facility - Advanced AI processing center" 
               className="w-full h-auto rounded-lg transition-transform duration-500 hover:scale-105"
             />
             <div className="p-4 text-center">
               <span className="text-garde-electric font-bold text-matrix">
-                MEME PRODUCTION FACILITY
+                NEURAL ENHANCED PROCESSING CENTER
               </span>
             </div>
           </div>
